@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            margin: 0;
+            background-color:#000000;
+            height: 100%;
+        }
+        canvas { 
+            width: 100vw; 
+            height: 100vh;
+        }
+        h1 {
+            cursor: pointer;
+            font-family: 'Hind', sans-serif;
+            color: #ffffff;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100vw;
+            height: 90px;
+            text-align: center;
+            font-size: 96px;
+            letter-spacing: 50px;
+            line-height: 1;
+            
+            animation: textani 5s ease-in infinite;
+            -webkit-animation: textani 5s ease-in infinite;
+        }
+        h1.hide { 
+            opacity: 0;
+            z-index: -1;
+            animation: none;
+            -webkit-animation: none;
+        }
+
+
+        @keyframes textani {
+            0% {
+                text-shadow: 0 0 5px #ffffff;
+                opacity: 0.1;
+            }
+            50% {
+                text-shadow: 0 0 25px #ffffff;
+                opacity: 0.5;
+            }
+            100% {
+                text-shadow: 0 0 5px #ffffff;
+                opacity: 0.1;
+            }
+        }
+
+        .mainContentBox {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 600px;
+            height: 500px;
+            background-color: rgba(255,255,255,0.8);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .mainContentBox.show {
+            animation: contani 0.5s ease-in forwards;
+            -webkit-animation: contani 0.5s ease-in forwards;
+        }
+
+        h2, p { color: #000000;}
+
+        @keyframes contani{
+            0% {
+                opacity: 0;
+                z-index: -1;
+            }
+            100% {
+                opacity: 1;
+                z-index: 3;
+            }
+        }
+
+    </style>
+
+   
+
+</head>
+<body>
+
+    
+    <h1 class="title">CNA MEDIA LAB</h1>
+
+    <div class="mainContentBox">
+        <h2>Rochester Officers Will Not Be Charged in Killing of Daniel Prude</h2>
+        <p>Mr. Prude, a Black man who was having an apparent psychotic episode, died after police officers placed a mesh hood over his head and pinned him to the ground.</p>
+        <p>Mr Bullen, then 20, was with a friend at the Fishbowl club in New York City when he says he encountered Alexander Wang on 24 August 2019 at about 11:30pm.</p>
+        <p>Paul Tweed, one of Mr Wang's lawyers, said he was currently awaiting CCTV footage of the club from the night which he said "his client believes will totally disprove this allegation".</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
